@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
     "express": "^4.17.1",
     "pg-promise": "^10.11.0",
     "postgresql": "0.0.1",
