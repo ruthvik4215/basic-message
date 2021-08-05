@@ -49,18 +49,18 @@
             color: #fff;
         }
 
-        #messages {
+        #textMessages {
             list-style-type: none;
             margin: 0;
             text-align: left;
             padding: 0;
         }
 
-        #messages>li {
+        #textMessages>li {
             padding: 0.5rem 1rem;
         }
 
-        #messages>li:nth-child(odd) {
+        #textMessages>li:nth-child(odd) {
             background: #efefef;
         }
     </style>
@@ -68,7 +68,7 @@
 
 <body>
     <h1>ZagFive</h1>
-    <ul id="messages"></ul>
+    <ul id="textMessages"></ul>
     <form id="form" action="">
         <input id="input" autocomplete="off" placeholder="Enter your message" />
         <button>Send</button>
@@ -78,7 +78,7 @@
     <script>
   var socket = io();
 
-  var messages = document.getElementById('messages');
+  var textMessages = document.getElementById('textMessages');
   var form = document.getElementById('form');
   var input = document.getElementById('input');
   var date = new Date();
@@ -95,7 +95,7 @@
   socket.on('chat message', function(msg, messageCreatedAt) {
     var item = document.createElement('li');
     item.textContent = msg + " " + "[ " + messageCreatedAt + " ]";
-    messages.appendChild(item);
+    textMessages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
   });
 </script>

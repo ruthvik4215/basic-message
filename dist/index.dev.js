@@ -1,8 +1,5 @@
 "use strict";
 
-var _require = require('dgram'),
-    Socket = _require.Socket;
-
 var express = require('express');
 
 var app = express();
@@ -11,8 +8,8 @@ var http = require('http');
 
 var server = http.createServer(app);
 
-var _require2 = require('socket.io'),
-    Server = _require2.Server;
+var _require = require('socket.io'),
+    Server = _require.Server;
 
 var io = new Server(server);
 app.get('/', function (req, res) {
