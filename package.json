@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "pg-promise": "^10.11.0",
     "postgresql": "0.0.1",
+    "redux": "^4.1.1",
     "socket.io": "^4.1.3"
   }
 }
